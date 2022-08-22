@@ -300,7 +300,8 @@ var mSubScript = (function () {
 
 		etcEvt: function () {
 			// 띠배너
-			contentPaddingTop = parseInt($("#content").css("padding-top"));
+			
+			contentPaddingTop = parseInt($("#wrap #content").css("padding-top"));
 
 			if($(".head_banner").size() > 0){
 				headBannerH = $(".head_banner").outerHeight();
