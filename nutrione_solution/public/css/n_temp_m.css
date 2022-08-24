@@ -1374,7 +1374,7 @@ footer .copyright{margin-top: 24px; font-size: 13px; line-height: 20px; color: #
 
 /* 고객센터 > 공지사항 */
 .noti_div .noti_list_div{}
-.noti_div .noti_list_div .list{padding: 20px; border-bottom: 1px solid #eee; display: table;}
+.noti_div .noti_list_div .list{padding: 20px; border-bottom: 1px solid #eee; display: table; width: 100%;}
 .noti_div .noti_list_div .list.important{background: #f9f9f9;}
 .noti_div .noti_list_div .list .sort{display: table-cell; vertical-align: middle; font-size: 13px; line-height: 18px; font-weight: 500;}
 .noti_div .noti_list_div .list.important .sort{color: #1877f2;}
