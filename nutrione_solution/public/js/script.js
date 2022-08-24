@@ -22,7 +22,7 @@ var subScript = (function(){
 				} else { // IE 11+
 					if(agent.indexOf("trident") > -1) { // IE 11
 						browser += 11;
-					} else if(agent.indexOf("edg/") > -1) { // Edge
+					} else if(agent.indexOf("edg/") > -1) { // Edge	
 						browser = "edge";
 					}
 				}
