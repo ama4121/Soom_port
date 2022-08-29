@@ -300,9 +300,14 @@ var mSubScript = (function () {
 
 		etcEvt: function () {
 			// 띠배너
+			setTimeout(() => {
+				if($("#content").parents(".main").size() > 0){
+					contentPaddingTop = parseInt($("#wrap.main #content").css("padding-top"));
+				}else{
+					contentPaddingTop = parseInt($("#content").css("padding-top"));
+				}
+			}, 100);
 			
-			contentPaddingTop = parseInt($("#wrap #content").css("padding-top"));
-
 			if($(".head_banner").size() > 0){
 				headBannerH = $(".head_banner").outerHeight();
 			}else{
@@ -310,9 +315,11 @@ var mSubScript = (function () {
 			}
 
 			if($(".head_banner").is(":visible")){
-				$("header").css("top", headBannerH);
-				$(".indicator").css("top", headBannerH);
-				$("#content").css("padding-top", contentPaddingTop + headBannerH);
+				setTimeout(() => {
+					$("header").css("top", headBannerH);
+					$(".indicator").css("top", headBannerH);
+					$("#content").css("padding-top", contentPaddingTop + headBannerH);
+				}, 100);
 			}else{
 				$("header").css("top", "");
 				$(".indicator").css("top", "");

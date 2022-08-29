@@ -271,11 +271,20 @@ var subScript = (function(){
 
 		etcEvt : function() {
 			//.content padding-top
-			contentPaddingTop = parseInt($("#content").css("padding-top"));
+			setTimeout(() => {
+				if($("#content").parents(".main").size() > 0){
+					contentPaddingTop = parseInt($("#wrap.main #content").css("padding-top"));
+				}else{
+					contentPaddingTop = parseInt($("#content").css("padding-top"));
+				}
+			}, 100);
 		
 			//띠배너
 			if($(".head_banner").is(":visible")){
-				headBannerH = $(".head_banner").outerHeight();
+				setTimeout(() => {
+					$("header").css("top", headBannerH);
+					$("#content").css("padding-top", contentPaddingTop + headBannerH);
+				},100);
 			}else{
 				headBannerH = 0;
 			}
