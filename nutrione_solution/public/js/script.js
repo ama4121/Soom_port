@@ -1,4 +1,6 @@
 var subScript = (function(){
+  var headBannerH = 0;
+      var contentPaddingTop;
 	var device = '';
 	return {
 		checkEvt : function(){
@@ -270,6 +272,7 @@ var subScript = (function(){
 		},
 
 		etcEvt : function() {
+
 			//.content padding-top
 			setTimeout(() => {
 				if($("#content").parents(".main").size() > 0){
@@ -281,6 +284,7 @@ var subScript = (function(){
 		
 			//띠배너
 			if($(".head_banner").is(":visible")){
+        headBannerH = $(".head_banner").outerHeight();
 				setTimeout(() => {
 					$("header").css("top", headBannerH);
 					$("#content").css("padding-top", contentPaddingTop + headBannerH);

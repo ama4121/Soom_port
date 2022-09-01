@@ -301,7 +301,7 @@ var mSubScript = (function () {
 		etcEvt: function () {
 			// 띠배너
 			setTimeout(() => {
-				if($("#content").parents(".main").size() > 0){
+				if($("#wrap").parents(".main").size() > 0){
 					contentPaddingTop = parseInt($("#wrap.main #content").css("padding-top"));
 				}else{
 					contentPaddingTop = parseInt($("#content").css("padding-top"));
